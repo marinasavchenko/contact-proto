@@ -16,7 +16,6 @@
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/io.grpc/grpc-netty -->
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-netty</artifactId>

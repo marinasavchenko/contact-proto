@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
-
 package contactvalidation;
 
 option java_package = "tech.contactvalidation";
@@ -17,17 +15,7 @@ message ContactValidationResponse {
   string contact_state = 1;
 }
 
-enum ContactValidationErrorCode {
-  NAME_CANNOT_BE_NULL = 0;
-  ADDRESS_CANNOT_BE_NULL = 1;
-}
-
-message ContactValidationExceptionResponse {
-  google.protobuf.Timestamp timestamp = 1;
-  ContactValidationErrorCode error_code = 2;
-}
-
 service ContactValidationService {
-  // unary
+
   rpc validateContact(ContactValidationRequest) returns (ContactValidationResponse) {};
 }
